@@ -40,3 +40,4 @@ for item in group_list:
             db.matches.insert_one(doc)
             # print(item)
 
+print('new')
