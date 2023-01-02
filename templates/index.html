@@ -103,6 +103,20 @@
             </tbody>
         </table>
 
+
+
+        <div class="mybox">
+            <h2>카타르</h2>
+            <h2>국기</h2>
+            <div class="mybucket">
+                <input id="bucket" class="form-control" type="text" placeholder="이루고 싶은 것을 입력하세요">
+                <button onclick="save_bucket()" type="button" class="btn btn-outline-primary">기록하기</button>
+            </div>
+        </div>
+        <div class="mybox" id="bucket-list">
+            <button onclick="save_bucket()">asdf</button>
+        </div>
+
     </div>
 </section>
 <!-- Services section end -->
@@ -153,12 +167,14 @@
 
 <script>
     $(document).ready(function () {
+        {#최초 프로그램 실행시#}
             view_group('A');
         });
     function hello(val){
         alert(val);
     }
     function view_group(val) {
+        {#그룹별 데이터 뽑아서 출력#}
         $('#group_score').empty()
 
         $.ajax({
@@ -182,11 +198,11 @@
 
                     temp_html = `<tr >
                                 <td>${num}</td>
-                                <td><span><img src="${home_img}"></span> ${HomeTeam}</td>
+                                <td><a href="#result" onclick="save_bucket(this)" value="${HomeTeam}"><span><img src="${home_img}"></span> <span>${HomeTeam}<span></a></td>
                                 <td>${HomeTeamScore}</td>
                                 <td>:</td>
                                 <td>${AwayTeamScore}</td>
-                                <td>${AwayTeam} <span><img src="${away_img}"></span> </td>
+                                <td><a href='#result' onclick="save_bucket(this)" value = '${AwayTeam}'><span>${AwayTeam}</span> <span><img src="${away_img}"></span> </a></td>
                             </tr>`
 
                     $('#group_score').append((temp_html))
@@ -197,6 +213,21 @@
 
             }
         });
+    }
+
+    function save_bucket(e) {
+        {#댓글 기능 구현#}
+        console.log(e.getAttribute('value'))
+
+        $.ajax({
+            type:'POST',
+            url: '/bucket',
+            data : {},
+            success: function(response){
+                alert('success')
+            }
+
+        })
     }
 </script>
 

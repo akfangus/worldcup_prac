@@ -59,7 +59,7 @@ for idx in range(len(l2)):
     # print(l2[idx][2], l1[idx][0], l2[idx][1], l1[idx][1])
     # print(l2[idx][1], l1[idx][0], l1[idx][1])
 
-    # 여기가 데이터 저장
+    # 여기가 데이터 저장 # 주석풀면 중복 데이터 저장됨.
     # db.teams.insert_one(doc)
 
     # print(l1[idx][0], l2[idx][0])
@@ -72,4 +72,5 @@ for idx in range(len(l2)):
 
 
 # 한글깨짐 해결하는 방법이라는데 오ㅑㅐ 안되는거지?
+# 계속 안되다가 어느순간 됨?
 # data2.content.decode('utf-8', 'replace')
