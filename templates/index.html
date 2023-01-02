@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--
+ * A Design by GraphBerry
+ * Author: GraphBerry
+ * Author URL: http://graphberry.com
+ * License: http://graphberry.com/pages/license
+-->
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProject</title>
+
+
+    <!-- Load fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+
+    <!-- Load css styles -->
+    {#    <!-- {{ url_for('static', filename='정적파일') }} -->#}
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+
+</head>
+<body>
+<div class="jumbotron home home-fullscreen" id="home">
+    <div class="mask">
+        <a href="#" class="logo ">
+            <img src="{{ url_for('static', filename='img/free-icon-world-cup-1031366.png') }}"><span
+                class="fifa_title">PIPA</span>
+        </a>
+
+
+        <a href="" class="menu-toggle" id="nav-expander"><i class="fa fa-bars"></i></a>
+        <!-- Offsite navigation -->
+        <nav class="menu">
+            <a href="#" class="close"><i class="fa fa-close"></i></a>
+            <h3>Menu</h3>
+            <ul class="nav">
+                <li><a data-scroll href="#home">Home</a></li>
+                <li><a data-scroll href="#result">Result</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="header-info">
+            <h1>2022 카타르 월드컵</h1>
+            <br>
+            <p>월드컵 경기 결과를 보여주는 웹페이지입니다.</p>
+            <br>
+            <p>현재기온: <span id="temp">36</span>℃</p>
+            <a href="#result" class="btn btn-info">Show Result</a>
+        </div>
+    </div>
+</div>
+<!-- Services section start -->
+<section id="result" class="bgbg">
+    <div class="container">
+        <ul class="group_ul">
+
+            <li class="group_li"><a href="#result" onclick="view_group('A')">A조</a></li>
+            <li class="group_li"><a href="#result" onclick="view_group('B')">B조</a></li>
+            <li class="group_li"><a href="#result" onclick="view_group('C')">C조</a></li>
+            <li class="group_li"><a href="#result" onclick="view_group('D')">D조</a></li>
+            <li class="group_li"><a href="#result" onclick="view_group('E')">E조</a></li>
+            <li class="group_li"><a href="#result" onclick="view_group('F')">F조</a></li>
+            <li class="group_li"><a href="#result" onclick="view_group('G')">G조</a></li>
+            <li class="group_li"><a href="#result" onclick="view_group('H')">H조</a></li>
+
+        </ul>
+    </div>
+
+    <div class="container">
+        <table class="table">
+
+            <thead class="thead-dark">
+            <tr>
+                <th style="width: 1%" scope="col">No</th>
+                <th style="width: 20%" scope="col">Home</th>
+                <th style="width: 10%" scope="col">score</th>
+                <th style="width: 10%" scope="col">vs</th>
+                <th style="width: 10%" scope="col">score</th>
+                <th style="width: 20%" scope="col">Away</th>
+            </tr>
+            </thead>
+            <tbody id="group_score">
+            <tr >
+                <td>1</td>
+                <td><span><img src="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/22px-Flag_of_Germany.svg.png"></span> 젊은이</td>
+                <td>1</td>
+                <td>:</td>
+                <td>1</td>
+                <td>늙은이 <span><img src="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/22px-Flag_of_Germany.svg.png"></span> </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</section>
+<!-- Services section end -->
+<!-- Portfolio section start -->
+<!-- Portfolio section end -->
+<!-- Contact section start -->
+
+<!-- Contact section end -->
+<!-- Footer start -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <p>Shinhaeng Lee</p>
+                <p>Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <ul class="social-icons">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href=""><i class="fa fa-behance"></i></a></li>
+                    <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer end  -->
+
+<!-- Load jQuery -->
+{#<!-- {{ url_for('static', filename='정적파일') }} -->#}
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
+
+<!-- Load Booststrap -->
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
+
+
+<!-- Load custom js for theme -->
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+<script>
+    $(document).ready(function () {
+            view_group('A');
+        });
+    function hello(val){
+        alert(val);
+    }
+    function view_group(val) {
+        $('#group_score').empty()
+
+        $.ajax({
+            type: "GET",
+            url: "/resultlist?&group="+val,
+            data: {},
+            success: function (response) {
+                let rows = response['throw_matches']
+                console.log(rows)
+                {#alert('success')#}
+                {#alert(response["msg"])#}
+                {#window.location.reload()#}
+                for (let i=0; i<rows.length; i++){
+                    let num = i+1
+                    let home_img = rows[i]['home_img']
+                    let HomeTeam = rows[i]['HomeTeam']
+                    let HomeTeamScore = rows[i]['HomeTeamScore']
+                    let AwayTeamScore = rows[i]['AwayTeamScore']
+                    let AwayTeam = rows[i]['AwayTeam']
+                    let away_img = rows[i]['away_img']
+
+                    temp_html = `<tr >
+                                <td>${num}</td>
+                                <td><span><img src="${home_img}"></span> ${HomeTeam}</td>
+                                <td>${HomeTeamScore}</td>
+                                <td>:</td>
+                                <td>${AwayTeamScore}</td>
+                                <td>${AwayTeam} <span><img src="${away_img}"></span> </td>
+                            </tr>`
+
+                    $('#group_score').append((temp_html))
+
+
+
+                }
+
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
